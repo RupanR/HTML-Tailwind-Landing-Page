@@ -25,46 +25,88 @@
     <title>Bookmark</title>
   </head>
   <body>
-  <!-- Header / Navigation part -->
-<header>
-    <nav class="container flex items-center py-4 mt-4 sm:mt-12">
+    <!-- Header / Navigation part -->
+    <header>
+      <nav class="container flex items-center py-4 mt-4 sm:mt-12">
         <div class="py-1">
-            <img src="assests/logo-bookmark.svg" alt="logo">
+          <img src="assests/logo-bookmark.svg" alt="logo" />
         </div>
-        <ul class="hidden sm:flex flex-1 justify-end items-center gap-12 text-[#242A45] uppercase text-sm">
-            <li class="cursor-pointer">Features</li>
-            <li class="cursor-pointer">Pricing</li>
-            <li class="cursor-pointer">Contact</li>
-            <button type="button" class="bg-[#f73434] text-white rounded-md px-7 py-3 uppercase">Login</button>
+        <ul
+          class="hidden sm:flex flex-1 justify-end items-center gap-12 text-[#242A45] uppercase text-sm"
+        >
+          <li class="cursor-pointer">Features</li>
+          <li class="cursor-pointer">Pricing</li>
+          <li class="cursor-pointer">Contact</li>
+          <button
+            type="button"
+            class="bg-[#f73434] text-white rounded-md px-7 py-3 uppercase"
+          >
+            Login
+          </button>
         </ul>
         <div class="flex sm:hidden flex-1 justify-end">
-            <i class="text-2xl fas fa-bars"></i>
+          <i class="text-2xl fas fa-bars"></i>
         </div>
-    </nav>
-</header>
+      </nav>
+    </header>
 
-  <!-- hero section -->
+    <!-- hero section -->
+    <section class="relative">
+      <!-- hero section div -->
+      <div
+        class="container flex flex-col-reverse lg:flex-row items-center gap-12 mt-14 lg:mt-28"
+      >
+        <!-- content part left side -->
+        <div class="flex flex-1 flex-col items-center lg:items-start">
+          <h2
+            class="text-[#242A45] text-3xl md:text-4xl lg:text-5xl text-center lg:text-left mb-6"
+          >
+            A simple Bookmark Manager
+          </h2>
+          <p class="text-[#9a9dac] text-lg text-center lg:text-left mb-6">
+            Bookmarks Extension for Google is a minimal, clean Chrome Extension
+            for Google Bookmarks. Open a new browser tab and see your sites load
+            instantly. Try it for free.
+          </p>
+          <!-- buttons part -->
+          <div class="flex justify-center flex-wrap gap-6">
+            <button
+              type="button"
+              class="shadow-md py-3 px-6 rounded-md transition duration-300 bg-blue-600 text-white hover:bg-white hover:text-black"
+            >
+              Get it on Chrome
+            </button>
+            <button
+              type="button"
+              class="shadow-md py-3 px-6 rounded-md transition duration-300 bg-white text-black hover:bg-blue-600 hover:text-white"
+            >
+              Get it on Firefox
+            </button>
+          </div>
+        </div>
+        <!-- image right side -->
+        <div class="flex justify-center flex-1 mb-10 md:mb-16 lg:mb-0 z-10">
+          <img
+            class="w-5/6 h-5/6 sm:w-3/4 sm:h-3/4 md:h-full md:w-full"
+            src="assests/hero-bg.png"
+            alt="hero"
+          />
+        </div>
+      </div>
+      <!-- background rectangle -->
+      <div class="hidden md:block overflow-hidden bg-blue-500 rounded-l-full absolute h-96 w-2/4 top-52 right-0 lg: -bottom-20 lg:-right-36"></div>
+    </section>
 
+    <!-- images part -->
 
-  <!-- images part -->
+    <!-- background part -->
 
+    <!-- features part -->
 
+    <!-- cards / download part -->
 
-  <!-- background part -->
+    <!-- FAQ Part -->
 
-
-
-  <!-- features part -->
-
-
-
-  <!-- cards / download part -->
-
-
-  <!-- FAQ Part -->
-
-
-
-  <!-- Footer Part -->
+    <!-- Footer Part -->
   </body>
 </html>
