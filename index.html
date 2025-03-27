@@ -4,6 +4,24 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style type="text/tailwindcss">
+      @theme {
+        --font-Poppins: "Poppins", sans-serif;
+        --font-Raleway: "Raleway", sans-serif;
+        --color-bookmark-purple: #5267DF;
+        --color-bookmark-red: #FA5959;
+        --color-bookmark-blue: #242A45;
+        --color-bookmark-grey: #9194A2;
+        --color-bookmark-white: #f7f7f7;
+        --container-lg:1124px;
+        --container-xl:1124px;
+        --container-2xl:1124px;
+      }
+      @utility container{
+        center:true;
+        padding:1rem;
+      }
+    </style>
     <link
       rel="shortcut icon"
       href="https://cdn-icons-png.flaticon.com/512/3031/3031121.png"
@@ -12,7 +30,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Poppins&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
       rel="stylesheet"
     />
     <link
@@ -24,7 +42,7 @@
     />
     <title>Bookmark</title>
   </head>
-  <body>
+  <body class="font-Poppins">
     <!-- Header / Navigation part -->
     <header>
       <nav class="container flex items-center py-4 mt-4 sm:mt-12">
@@ -32,14 +50,14 @@
           <img src="assests/logo-bookmark.svg" alt="logo" />
         </div>
         <ul
-          class="hidden sm:flex flex-1 justify-end items-center gap-12 text-[#242A45] uppercase text-sm"
+          class="hidden sm:flex flex-1 justify-end items-center gap-12 text-bookmark-blue uppercase text-sm"
         >
           <li class="cursor-pointer">Features</li>
           <li class="cursor-pointer">Pricing</li>
           <li class="cursor-pointer">Contact</li>
           <button
             type="button"
-            class="bg-[#f73434] text-white rounded-md px-7 py-3 uppercase"
+            class="bg-bookmark-red text-white rounded-md px-7 py-3 uppercase"
           >
             Login
           </button>
@@ -59,11 +77,11 @@
         <!-- content part left side -->
         <div class="flex flex-1 flex-col items-center lg:items-start">
           <h2
-            class="text-[#242A45] text-3xl md:text-4xl lg:text-5xl text-center lg:text-left mb-6"
+            class="text-bookmark-blue font-Raleway text-3xl md:text-4xl lg:text-5xl text-center lg:text-left mb-6"
           >
             A simple Bookmark Manager
           </h2>
-          <p class="text-[#9a9dac] text-lg text-center lg:text-left mb-6">
+          <p class="text-bookmark-grey text-lg text-center lg:text-left mb-6">
             Bookmarks Extension for Google is a minimal, clean Chrome Extension
             for Google Bookmarks. Open a new browser tab and see your sites load
             instantly. Try it for free.
@@ -72,13 +90,13 @@
           <div class="flex justify-center flex-wrap gap-6">
             <button
               type="button"
-              class="shadow-md py-3 px-6 rounded-md transition duration-300 bg-blue-600 text-white hover:bg-white hover:text-black"
+              class="shadow-md py-3 px-6 rounded-md transition duration-300 bg-bookmark-purple text-white hover:bg-white hover:text-black"
             >
               Get it on Chrome
             </button>
             <button
               type="button"
-              class="shadow-md py-3 px-6 rounded-md transition duration-300 bg-white text-black hover:bg-blue-600 hover:text-white"
+              class="shadow-md py-3 px-6 rounded-md transition duration-300 bg-white text-black hover:bg-bookmark-purple hover:text-white"
             >
               Get it on Firefox
             </button>
@@ -95,14 +113,14 @@
       </div>
       <!-- background rectangle -->
       <div
-        class="hidden md:block overflow-hidden bg-blue-500 rounded-l-full absolute h-96 w-2/4 top-52 right-0 lg: -bottom-20 lg:-right-36"
+        class="hidden md:block overflow-hidden bg-bookmark-purple rounded-l-full absolute h-96 w-2/4 top-52 right-0 lg: -bottom-20 lg:-right-36"
       ></div>
     </section>
     <!-- features part -->
-    <section class="bg-white py-20 mt-25 lg:mt-60">
+    <section class="bg-bookmark-white py-20 mt-25 lg:mt-60">
       <div class="sm:w-3/4 lg:w-5/12 mx-auto px-2">
-        <h1 class="text-4xl text-center text-blue-500">Features</h1>
-        <p class="text-center text-[#9a9dac] mt-4">
+        <h1 class="text-4xl text-center text-bookmark-blue">Features</h1>
+        <p class="text-center text-bookmark-grey mt-4">
           Our aim is to make it quick and easy for you to access your favourite
           websites. Your bookmarks sync between your devices so you can access
           them on the go.
@@ -123,9 +141,9 @@
           </div>
           <!-- content -->
           <div class="flex flex-1 flex-col items-center lg:items-start">
-            <h1 class="text-3xl text-blue-500">Bookmark in one click</h1>
+            <h1 class="text-3xl text-bookmark-blue">Bookmark in one click</h1>
             <p
-              class="text-[#9a9dac] my-4 text-center lg:text-left sm:w-3/4 lg:w-full"
+              class="text-bookmark-grey my-4 text-center lg:text-left sm:w-3/4 lg:w-full"
             >
               Organize your bookmarks however you like. Our simple drag-and-drop
               interface gives you complete control over how you manage your
@@ -133,7 +151,7 @@
             </p>
             <button
               type="button"
-              class="shadow-md py-3 px-6 rounded-md transition duration-300 bg-blue-600 text-white hover:bg-white hover:text-black"
+              class="shadow-md py-3 px-6 rounded-md transition duration-300 bg-bookmark-purple text-white hover:bg-white hover:text-black"
             >
               More Info
             </button>
@@ -141,7 +159,7 @@
         </div>
         <!-- rectangle -->
         <div
-          class="hidden md:block overflow-hidden bg-blue-500 rounded-r-full absolute h-96 w-2/4 -bottom-24 -left-24"
+          class="hidden md:block overflow-hidden bg-bookmark-purple rounded-r-full absolute h-96 w-2/4 -bottom-24 -left-24"
         ></div>
       </div>
 
@@ -160,16 +178,16 @@
           </div>
           <!-- content -->
           <div class="flex flex-1 flex-col items-center lg:items-start">
-            <h1 class="text-3xl text-blue-500">Intelligent search</h1>
+            <h1 class="text-3xl text-bookmark-blue">Intelligent search</h1>
             <p
-              class="text-[#9a9dac] my-4 text-center lg:text-left sm:w-3/4 lg:w-full"
+              class="text-bookmark-grey my-4 text-center lg:text-left sm:w-3/4 lg:w-full"
             >
               Our powerful search feature will help you find saved sites in no
               time at all. No need to crawl through all of your bookmarks.
             </p>
             <button
               type="button"
-              class="shadow-md py-3 px-6 rounded-md transition duration-300 bg-blue-600 text-white hover:bg-white hover:text-black"
+              class="shadow-md py-3 px-6 rounded-md transition duration-300 bg-bookmark-purple text-white hover:bg-white hover:text-black"
             >
               More Info
             </button>
@@ -177,7 +195,7 @@
         </div>
         <!-- rectangle -->
         <div
-          class="hidden md:block overflow-hidden bg-blue-500 rounded-l-full absolute h-96 w-2/4 -bottom-24 -right-24"
+          class="hidden md:block overflow-hidden bg-bookmark-purple rounded-l-full absolute h-96 w-2/4 -bottom-24 -right-24"
         ></div>
       </div>
 
@@ -196,16 +214,16 @@
           </div>
           <!-- content -->
           <div class="flex flex-1 flex-col items-center lg:items-start">
-            <h1 class="text-3xl text-blue-500">Share your bookmarks</h1>
+            <h1 class="text-3xl text-bookmark-blue">Share your bookmarks</h1>
             <p
-              class="text-[#9a9dac] my-4 text-center lg:text-left sm:w-3/4 lg:w-full"
+              class="text-bookmark-grey my-4 text-center lg:text-left sm:w-3/4 lg:w-full"
             >
               Easily share your bookmarks and collections with others. Create a
               shareable link that you can send at the click of a button.
             </p>
             <button
               type="button"
-              class="shadow-md py-3 px-6 rounded-md transition duration-300 bg-blue-600 text-white hover:bg-white hover:text-black"
+              class="shadow-md py-3 px-6 rounded-md transition duration-300 bg-bookmark-purple text-white hover:bg-white hover:text-black"
             >
               More Info
             </button>
@@ -213,7 +231,7 @@
         </div>
         <!-- rectangle -->
         <div
-          class="hidden md:block overflow-hidden bg-blue-500 rounded-r-full absolute h-96 w-2/4 -bottom-24 -left-24"
+          class="hidden md:block overflow-hidden bg-bookmark-purple rounded-r-full absolute h-96 w-2/4 -bottom-24 -left-24"
         ></div>
       </div>
     </section>
@@ -221,10 +239,10 @@
     <!-- cards / download part -->
     <section class="py-20 mt-20">
       <div class="sm:w-3/4 lg:w-5/12 mx-auto px-2">
-        <h1 class="text-3xl text-center text-blue-500">
+        <h1 class="text-3xl text-center text-bookmark-blue">
           Download the Extension
         </h1>
-        <p class="text-center text-[#9a9dac] mt-4">
+        <p class="text-center text-bookmark-grey mt-4">
           We've got more browsers in the pipeline.Please do let us know if
           you've got a favourite you'd like us to prioritize.
         </p>
@@ -237,14 +255,14 @@
         <div class="flex flex-col rounded-md shadow-md lg:mb-16">
           <div class="p-6 flex flex-col items-center">
             <img src="assests/logo-chrome.svg" alt="logo" />
-            <h3 class="mt-5 mb-2 text-blue-500 text-lg">Add to Chrome</h3>
-            <p class="text-[#9a9dac] font-light mb-2">Minimum Version 32</p>
+            <h3 class="mt-5 mb-2 text-bookmark-blue text-lg">Add to Chrome</h3>
+            <p class="text-bookmark-grey font-light mb-2">Minimum Version 32</p>
           </div>
-          <hr class="border-b border-white" />
+          <hr class="border-b border-bookmark-white" />
           <div class="flex p-6">
             <button
               type="button"
-              class="flex-1 shadow-md py-3 px-6 rounded-md transition duration-300 bg-blue-600 text-white hover:bg-white hover:text-black"
+              class="flex-1 shadow-md py-3 px-6 rounded-md transition duration-300 bg-bookmark-purple text-white hover:bg-white hover:text-black"
             >
               Add & Install the Extension
             </button>
@@ -254,14 +272,14 @@
         <div class="flex flex-col rounded-md shadow-md lg:my-8">
           <div class="p-6 flex flex-col items-center">
             <img src="assests/logo-firefox.svg" alt="logo" />
-            <h3 class="mt-5 mb-2 text-blue-500 text-lg">Add to FireFox</h3>
-            <p class="text-[#9a9dac] font-light mb-2">Minimum Version 32</p>
+            <h3 class="mt-5 mb-2 text-bookmark-blue text-lg">Add to FireFox</h3>
+            <p class="text-bookmark-grey font-light mb-2">Minimum Version 32</p>
           </div>
-          <hr class="border-b border-white" />
+          <hr class="border-b border-bookmark-white" />
           <div class="flex p-6">
             <button
               type="button"
-              class="flex-1 shadow-md py-3 px-6 rounded-md transition duration-300 bg-blue-600 text-white hover:bg-white hover:text-black"
+              class="flex-1 shadow-md py-3 px-6 rounded-md transition duration-300 bg-bookmark-purple text-white hover:bg-white hover:text-black"
             >
               Add & Install the Extension
             </button>
@@ -271,14 +289,14 @@
         <div class="flex flex-col rounded-md shadow-md lg:mt-16">
           <div class="p-6 flex flex-col items-center">
             <img src="assests/logo-opera.svg" alt="logo" />
-            <h3 class="mt-5 mb-2 text-blue-500 text-lg">Add to Opera</h3>
-            <p class="text-[#9a9dac] font-light mb-2">Minimum Version 32</p>
+            <h3 class="mt-5 mb-2 text-bookmark-blue text-lg">Add to Opera</h3>
+            <p class="text-bookmark-grey font-light mb-2">Minimum Version 32</p>
           </div>
-          <hr class="border-b border-white" />
+          <hr class="border-b border-bookmark-white" />
           <div class="flex p-6">
             <button
               type="button"
-              class="flex-1 shadow-md py-3 px-6 rounded-md transition duration-300 bg-blue-600 text-white hover:bg-white hover:text-black"
+              class="flex-1 shadow-md py-3 px-6 rounded-md transition duration-300 bg-bookmark-purple text-white hover:bg-white hover:text-black"
             >
               Add & Install the Extension
             </button>
@@ -288,13 +306,13 @@
     </section>
 
     <!-- FAQ Part -->
-    <section class="bg-white py-20">
+    <section class="bg-bookmark-white py-20">
       <div class="container">
         <div class="sm:w-3/4 lg:w-5/12 mx-auto px-2">
-          <h1 class="text-3xl text-center text-blue-500">
+          <h1 class="text-3xl text-center text-bookmark-blue">
             Frequently Asked Questions
           </h1>
-          <p class="text-center text-[#9a9dac] mt-4">
+          <p class="text-center text-bookmark-grey mt-4">
             Here are some of our FAQs. If you have any other questions you'd lik
             answered please feel free to reach out us.
           </p>
@@ -303,26 +321,26 @@
         <div class="flex flex-col sm:w-3/4 lg:w-5/12 mx-auto mt-12">
           <div class="flex items-center border-b py-4">
             <span class="flex-1">What is a Bookmark?</span>
-            <i class="fas fa-chevron-down text-blue-500"></i>
+            <i class="fas fa-chevron-down text-bookmark-blue"></i>
           </div>
           <div class="flex items-center border-b py-4">
             <span class="flex-1">How Can I Request a new Browser?</span>
-            <i class="fas fa-chevron-down text-blue-500"></i>
+            <i class="fas fa-chevron-down text-bookmark-blue"></i>
           </div>
           <div class="flex items-center border-b py-4">
             <span class="flex-1">Is there a Mobile-App ?</span>
-            <i class="fas fa-chevron-down text-blue-500"></i>
+            <i class="fas fa-chevron-down text-bookmark-blue"></i>
           </div>
           <div class="flex items-center border-b py-4">
             <span class="flex-1">What About Chromium Browsers?</span>
-            <i class="fas fa-chevron-down text-blue-500"></i>
+            <i class="fas fa-chevron-down text-bookmark-blue"></i>
           </div>
         </div>
       </div>
     </section>
 
     <!-- contact US part -->
-    <section class="bg-purple-700 text-white py-20">
+    <section class="bg-bookmark-purple text-white py-20">
       <div class="container">
         <div class="sm:w-3/4 lg:w-2/4 mx-auto">
           <p class="font-light uppercase text-center mb-8">
@@ -339,7 +357,7 @@
             />
             <button
               type="button"
-              class="shadow-md py-3 px-6 rounded-md transition duration-300 bg-red-600 text-white hover:bg-white hover:text-black"
+              class="shadow-md py-3 px-6 rounded-md transition duration-300 bg-bookmark-red text-white hover:bg-white hover:text-black"
             >
               Contact Us
             </button>
@@ -349,7 +367,7 @@
     </section>
 
     <!-- Footer Part -->
-    <footer class="bg-blue-950 py-8">
+    <footer class="bg-bookmark-blue py-8">
       <div class="container flex flex-col md:flex-row items-center">
         <div
           class="flex flex-1 flex-wrap items-center justify-center md:justify-start gap-12"
